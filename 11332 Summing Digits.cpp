@@ -5,10 +5,10 @@ using namespace std;
 #define fw freopen("out.txt", "w", stdout);
 #define mem(x) memset((x), 0, sizeof((x)));
 
- int divisible_by_three(string num){
+ int sum_of_digits(string num){
     int temp = 0;
     for(int i = 0; i < num.length(); i++) temp += (num[i]-'0');
-    debug(temp);
+    //debug(temp);
     int number = temp;
     while(temp > 9){
         //debug(temp);
@@ -27,7 +27,7 @@ int main(){
     string str;
     while((cin >> str)){
         if(str == "0") break;
-        int result = divisible_by_three(str);
+        int result = sum_of_digits(str);
         printf("%d\n", result);
     }
     return 0;
